@@ -11,10 +11,10 @@ import {NavigationBarModule} from './navigation-bar/navigation-bar.module';
   declarations: [AppComponent],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    NavigationBarModule
+    NavigationBarModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

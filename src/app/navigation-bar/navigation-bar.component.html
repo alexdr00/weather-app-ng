@@ -1,10 +1,11 @@
 <mat-toolbar color="primary" id="navbar">
   <div class="nav-section left-section">
-    <span id="logo">Weather App</span>
+    <span id="logo" [routerLink]="''">Weather App</span>
 
     <button
       class="link"
       mat-button
+      [routerLink]="link.path"
       *ngFor="let link of leftLinks">
 
       {{link.text}}
@@ -15,6 +16,7 @@
     <button
       class="link"
       mat-button
+      [routerLink]="link.path"
       *ngFor="let link of rightLinks">
 
       {{link.text}}

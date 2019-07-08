@@ -1,0 +1,23 @@
+#navbar {
+  display: flex;
+}
+
+#logo {
+  margin-right: 15px;
+}
+
+.nav-section {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+}
+
+.right-section {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.link {
+  height: 100%;
+}

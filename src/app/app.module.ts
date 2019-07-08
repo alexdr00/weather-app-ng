@@ -5,24 +5,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from '../lib/material';
-import { LoginComponent } from './login/login.component';
-import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
-import { RegisterComponent } from './register/register.component';
-import { SearchHistoryComponent } from './search-history/search-history.component';
+import {NavigationBarModule} from './navigation-bar/navigation-bar.module';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    LoginComponent,
-    NavigationBarComponent,
-    RegisterComponent,
-    SearchHistoryComponent
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    NavigationBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

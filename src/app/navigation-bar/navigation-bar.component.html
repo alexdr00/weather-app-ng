@@ -1,1 +1,23 @@
-<p>navigation-bar works!</p>
+<mat-toolbar color="primary" id="navbar">
+  <div class="nav-section left-section">
+    <span id="logo">Weather App</span>
+
+    <button
+      class="link"
+      mat-button
+      *ngFor="let link of leftLinks">
+
+      {{link.text}}
+    </button>
+  </div>
+
+  <div class="nav-section right-section">
+    <button
+      class="link"
+      mat-button
+      *ngFor="let link of rightLinks">
+
+      {{link.text}}
+    </button>
+  </div>
+</mat-toolbar>

@@ -1,0 +1,12 @@
+@import '../../../constants';
+
+:host {
+  @media (max-width: $widthToResponsiveNav) {
+    width: 100%;
+  }
+}
+
+.link {
+  width: 100%;
+  padding: 5px;
+}

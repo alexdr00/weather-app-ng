@@ -3,13 +3,14 @@ import { CommonModule } from '@angular/common';
 import { NavigationBarComponent } from './navigation-bar.component';
 import {MaterialModule} from '../../lib/material';
 import {RouterModule} from '@angular/router';
+import {LinkComponent} from './link/link.component';
 
 
 @NgModule({
-  declarations: [NavigationBarComponent],
+  declarations: [NavigationBarComponent, LinkComponent],
   imports: [
-    MaterialModule,
     CommonModule,
+    MaterialModule,
     RouterModule,
   ],
   exports: [

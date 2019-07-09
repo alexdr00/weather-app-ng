@@ -1,5 +1,14 @@
+@import '../../constants';
+
+#toolbar {
+  position: relative;
+}
+
 #navbar {
   display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
 }
 
 #logo {
@@ -7,18 +16,43 @@
   margin-right: 15px;
 }
 
-.nav-section {
-  display: flex;
-  align-items: center;
-  width: 50%;
-  height: 100%;
-}
-
 .right-section {
   display: flex;
   justify-content: flex-end;
 }
 
-.link {
+#hamburguer {
+  width: 100%;
+  align-items: center;
+
+  @media (min-width: $widthToResponsiveNav) {
+    display: none;
+  }
+}
+
+.nav-section {
+  display: flex;
+  align-items: center;
+  width: 50%;
   height: 100%;
+
+  @media (max-width: $widthToResponsiveNav) {
+    display: none;
+  }
+}
+
+.nav-responsive {
+  display: flex;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  background-color: $primary;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: $widthToResponsiveNav) {
+    display: none;
+  }
 }

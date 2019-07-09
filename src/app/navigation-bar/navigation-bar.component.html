@@ -1,25 +1,24 @@
-<mat-toolbar color="primary" id="navbar">
-  <div class="nav-section left-section">
+<mat-toolbar color="primary" id="toolbar">
+  <div id="navbar">
     <span id="logo" [routerLink]="''">Weather App</span>
 
-    <button
-      class="link"
-      mat-button
-      [routerLink]="link.path"
-      *ngFor="let link of leftLinks">
+    <div class="nav-section left-section">
+      <app-nav-link *ngFor="let link of leftLinks" [link]="link"></app-nav-link>
+    </div>
 
-      {{link.text}}
-    </button>
-  </div>
+    <div class="nav-section right-section">
+      <app-nav-link *ngFor="let link of rightLinks" [link]="link"></app-nav-link>
+    </div>
 
-  <div class="nav-section right-section">
-    <button
-      class="link"
-      mat-button
-      [routerLink]="link.path"
-      *ngFor="let link of rightLinks">
+    <!-- responsive   -->
 
-      {{link.text}}
-    </button>
+    <div class="nav-responsive" *ngIf="showResponsiveMenu">
+      <app-nav-link *ngFor="let link of joinLinks()" [link]="link"></app-nav-link>
+    </div>
+
+    <div id="hamburguer" class="right-section">
+      <i class="material-icons" (click)="toggleResponsiveMenu()">menu</i>
+    </div>
   </div>
 </mat-toolbar>
+

@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {FormControl} from '@angular/forms';
 
 @Component({
@@ -7,6 +7,7 @@ import {FormControl} from '@angular/forms';
   styleUrls: ['./search-input.component.scss']
 })
 export class SearchInputComponent implements OnInit {
+  @Output() submitted = new EventEmitter();
 
   constructor() { }
 

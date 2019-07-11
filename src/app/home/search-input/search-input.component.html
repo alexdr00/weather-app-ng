@@ -1,4 +1,4 @@
-<form (ngSubmit)="onSubmit()" id="search-input-form">
+<form (ngSubmit)="submitted.emit(); onSubmit()" id="search-input-form">
   <mat-form-field class="input-container" appearance="outline">
     <mat-label>City</mat-label>
 

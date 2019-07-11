@@ -9,6 +9,12 @@ export class HomeComponent implements OnInit {
 
   constructor() { }
 
+  private position: 'top' | 'middle' = 'middle';
+
+  moveUp() {
+    this.position = 'top';
+  }
+
   ngOnInit() {
   }
 

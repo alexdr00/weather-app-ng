@@ -4,13 +4,4 @@
   position: absolute;
   left: 0;
   right: 0;
-  transition: top 1s;
-
-  &.top {
-    top: 12vh;
-  }
-
-  &.middle {
-    top: 50vh;
-  }
 }

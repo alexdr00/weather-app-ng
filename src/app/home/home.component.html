@@ -1,3 +1,3 @@
-<div [ngClass]="['search-input', position]">
+<div class="search-input" [@move]="position">
   <app-search-input (submitted)="moveUp()"></app-search-input>
 </div>

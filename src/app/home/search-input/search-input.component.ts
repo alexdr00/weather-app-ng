@@ -6,18 +6,7 @@ import {FormControl} from '@angular/forms';
   templateUrl: './search-input.component.html',
   styleUrls: ['./search-input.component.scss']
 })
-export class SearchInputComponent implements OnInit {
+export class SearchInputComponent {
   @Output() submitted = new EventEmitter();
-
-  constructor() { }
-
-  city = new FormControl('');
-
-  onSubmit() {
-    console.log(this.city);
-  }
-
-  ngOnInit() {
-  }
-
+  @Input() city: FormControl;
 }

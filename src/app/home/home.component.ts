@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {animate, state, style, transition, trigger} from '@angular/animations';
+import {FormControl} from '@angular/forms';
 
 @Component({
   selector: 'app-home',
@@ -26,9 +27,11 @@ export class HomeComponent implements OnInit {
   constructor() { }
 
   private position: 'top' | 'middle' = 'middle';
+  private city = new FormControl('');
 
-  moveUp() {
+  onSubmit() {
     this.position = 'top';
+    console.log(this.city);
   }
 
   ngOnInit() {

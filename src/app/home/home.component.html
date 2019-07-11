@@ -1,3 +1,5 @@
 <div class="search-input" [@move]="position">
-  <app-search-input (submitted)="moveUp()"></app-search-input>
+  <app-search-input
+    [city]="city"
+    (submitted)="onSubmit()"></app-search-input>
 </div>

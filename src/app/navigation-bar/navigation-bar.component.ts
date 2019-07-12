@@ -44,17 +44,13 @@ export class NavigationBarComponent {
     { path: '/login', text: 'Login' }
   ];
 
-  private showResponsiveMenu = false;
+  private isMenuOpened = false;
 
   joinLinks(): Link[] {
     return this.leftLinks.concat(this.rightLinks);
   }
 
   toggleResponsiveMenu(): void {
-    this.showResponsiveMenu = !this.showResponsiveMenu;
-  }
-
-  log() {
-    console.log('heyy');
+    this.isMenuOpened = !this.isMenuOpened;
   }
 }

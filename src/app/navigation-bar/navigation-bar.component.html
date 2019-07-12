@@ -1,4 +1,4 @@
-<mat-toolbar color="primary" id="toolbar">
+<mat-toolbar color="primary" id="toolbar" (appOnClickAway)="showResponsiveMenu ? toggleResponsiveMenu() : null">
   <div id="navbar">
     <span id="logo" [routerLink]="''">Weather App</span>
 
@@ -11,26 +11,21 @@
     </div>
 
     <!-- responsive   -->
-
     <div class="nav-responsive"
-       (appOnClickAway)="log()"
        *ngIf="showResponsiveMenu"
        @slideResponsiveNav>
 
       <app-nav-link *ngFor="let link of joinLinks()" [link]="link"></app-nav-link>
     </div>
 
-
-
     <div id="hamburguer" class="right-section">
       <i
         class="material-icons"
-        *ngIf="!showResponsiveMenu"
         (click)="toggleResponsiveMenu()">menu</i>
 
-      <i class="material-icons"
-         *ngIf="showResponsiveMenu"
-         (click)="toggleResponsiveMenu()">close</i>
+<!--      <i class="material-icons"-->
+<!--         *ngIf="showResponsiveMenu"-->
+<!--         (click)="toggleResponsiveMenu()">close</i>-->
     </div>
   </div>
 </mat-toolbar>

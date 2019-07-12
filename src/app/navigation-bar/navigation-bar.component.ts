@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import {Link} from '../../types';
-import {animate, state, style, transition, trigger} from '@angular/animations';
+import {animate, style, transition, trigger} from '@angular/animations';
 
 const show = 'polygon(100% 0, 100% 100%, 0 100%, 0 0)';
 const hide = 'polygon(100% 0, 100% 0, 0 0, 0 0)';

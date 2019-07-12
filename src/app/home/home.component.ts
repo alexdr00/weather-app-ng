@@ -9,15 +9,29 @@ import {FormControl} from '@angular/forms';
   animations: [
     trigger('move', [
       state('top', style({
-        top: '12%'
+        top: '12vh'
       })),
 
       state('middle', style({
-        top: '50%'
+        top: '50vh'
       })),
 
       transition('middle => top', [
         animate('1s')
+      ])
+    ]),
+
+    trigger('showDetails', [
+      state('hidden', style({
+        opacity: 0
+      })),
+
+      state('shown', style({
+        opacity: 1
+      })),
+
+      transition('hidden => shown', [
+        animate('0.5s 0.5s')
       ])
     ])
   ]
@@ -27,11 +41,14 @@ export class HomeComponent implements OnInit {
   constructor() { }
 
   private position: 'top' | 'middle' = 'middle';
+  private hasBeenSubmitted = false;
   private city = new FormControl('');
 
   onSubmit() {
     this.position = 'top';
-    console.log(this.city);
+    this.hasBeenSubmitted = true;
+
+    console.log(this.city.value);
   }
 
   ngOnInit() {

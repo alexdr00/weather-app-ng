@@ -6,11 +6,12 @@ import { HomeComponent } from './home.component';
 import { SearchInputComponent } from './search-input/search-input.component';
 import {MaterialModule} from '../../lib/material';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { WeatherDetailsComponent } from './weather-details/weather-details.component';
 
 
 
 @NgModule({
-  declarations: [HomeComponent, SearchInputComponent],
+  declarations: [HomeComponent, SearchInputComponent, WeatherDetailsComponent],
   imports: [
     CommonModule,
     MaterialModule,

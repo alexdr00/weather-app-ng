@@ -12,12 +12,19 @@
 
     <!-- responsive   -->
 
-    <div class="nav-responsive" *ngIf="showResponsiveMenu">
+    <div class="nav-responsive" [@slideResponsiveNav]="showResponsiveMenu ? 'shown' : 'hidden'">
       <app-nav-link *ngFor="let link of joinLinks()" [link]="link"></app-nav-link>
     </div>
 
     <div id="hamburguer" class="right-section">
-      <i class="material-icons" (click)="toggleResponsiveMenu()">menu</i>
+      <i
+        class="material-icons"
+        *ngIf="!showResponsiveMenu"
+        (click)="toggleResponsiveMenu()">menu</i>
+
+      <i class="material-icons"
+         *ngIf="showResponsiveMenu"
+         (click)="toggleResponsiveMenu()">close</i>
     </div>
   </div>
 </mat-toolbar>

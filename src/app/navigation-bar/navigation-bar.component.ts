@@ -1,10 +1,30 @@
 import { Component, OnInit } from '@angular/core';
 import {Link} from '../../types';
+import {animate, state, style, transition, trigger} from '@angular/animations';
 
 @Component({
   selector: 'app-navigation-bar',
   templateUrl: './navigation-bar.component.html',
-  styleUrls: ['./navigation-bar.component.scss']
+  styleUrls: ['./navigation-bar.component.scss'],
+  animations: [
+    trigger('slideResponsiveNav', [
+      state('shown', style({
+        clipPath: 'polygon(100% 0, 100% 100%, 0 100%, 0 0)',
+      })),
+
+      state('hidden', style({
+        clipPath: 'polygon(100% 0, 100% 0, 0 0, 0 0)',
+      })),
+
+      transition('shown => hidden', [
+        animate('0.3s')
+      ]),
+
+      transition('hidden => shown', [
+        animate('0.3s')
+      ]),
+    ])
+  ]
 })
 export class NavigationBarComponent implements OnInit {
 

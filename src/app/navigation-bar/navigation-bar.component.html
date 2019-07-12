@@ -15,7 +15,7 @@
        *ngIf="isMenuOpened"
        @slideResponsiveNav>
 
-      <app-nav-link *ngFor="let link of joinLinks()" [link]="link"></app-nav-link>
+      <app-nav-link *ngFor="let link of joinLinks()" [link]="link" (clicked)="toggleResponsiveMenu()"></app-nav-link>
     </div>
 
     <div id="hamburguer" class="right-section" >

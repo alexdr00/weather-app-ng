@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {Link} from '../../../types';
 
 @Component({
@@ -6,11 +6,7 @@ import {Link} from '../../../types';
   templateUrl: './link.component.html',
   styleUrls: ['./link.component.scss']
 })
-export class LinkComponent implements OnInit {
+export class LinkComponent {
   @Input() link: Link;
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  @Output() clicked = new EventEmitter();
 }

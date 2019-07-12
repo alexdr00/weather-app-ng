@@ -1,6 +1,7 @@
 <button
   class="link"
   mat-button
+  (click)="clicked.emit()"
   [routerLink]="link.path">
 
   {{link.text}}

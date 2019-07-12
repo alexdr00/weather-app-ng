@@ -1,0 +1,10 @@
+<form (ngSubmit)="submitted.emit()" id="search-input-form">
+  <mat-form-field class="input-container" appearance="outline">
+    <mat-label>City</mat-label>
+
+    <input matInput [formControl]="city" class="input">
+  </mat-form-field>
+  <button mat-raised-button color="primary" type="submit" id="submit">
+    <i class="material-icons">location_searching</i>
+  </button>
+</form>

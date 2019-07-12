@@ -1,1 +1,9 @@
-<p>home works!</p>
+<div class="search-input" [@move]="position">
+  <app-search-input
+    [city]="city"
+    (submitted)="onSubmit()"></app-search-input>
+</div>
+
+<div class="details" [@showDetails]="hasBeenSubmitted ? 'shown' : 'hidden'">
+  <app-weather-details *ngIf="hasBeenSubmitted"></app-weather-details>
+</div>

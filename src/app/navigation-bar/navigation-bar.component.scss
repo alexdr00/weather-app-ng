@@ -42,12 +42,12 @@
 }
 
 .nav-responsive {
-  display: flex;
   position: absolute;
   top: 100%;
   left: 0;
   right: 0;
   z-index: 99;
+  display: flex;
   background-color: $primary;
   flex-direction: column;
   align-items: center;

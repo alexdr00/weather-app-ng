@@ -4,6 +4,7 @@ import { NavigationBarComponent } from './navigation-bar.component';
 import {MaterialModule} from '../../lib/material';
 import {RouterModule} from '@angular/router';
 import {LinkComponent} from './link/link.component';
+import {DirectivesModule} from '../directives';
 
 
 @NgModule({
@@ -12,6 +13,7 @@ import {LinkComponent} from './link/link.component';
     CommonModule,
     MaterialModule,
     RouterModule,
+    DirectivesModule
   ],
   exports: [
     NavigationBarComponent

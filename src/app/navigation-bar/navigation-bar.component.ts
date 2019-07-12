@@ -26,7 +26,7 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
     ])
   ]
 })
-export class NavigationBarComponent implements OnInit {
+export class NavigationBarComponent {
 
   constructor() { }
 
@@ -49,6 +49,7 @@ export class NavigationBarComponent implements OnInit {
     this.showResponsiveMenu = !this.showResponsiveMenu;
   }
 
-  ngOnInit() {
+  log() {
+    console.log('heyy');
   }
 }

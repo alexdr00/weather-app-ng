@@ -12,9 +12,13 @@
 
     <!-- responsive   -->
 
-    <div class="nav-responsive" [@slideResponsiveNav]="showResponsiveMenu ? 'shown' : 'hidden'">
-      <app-nav-link *ngFor="let link of joinLinks()" [link]="link"></app-nav-link>
-    </div>
+      <div class="nav-responsive"
+           (appOnClickAway)="log()"
+           [@slideResponsiveNav]="showResponsiveMenu ? 'shown' : 'hidden'">
+        <app-nav-link *ngFor="let link of joinLinks()" [link]="link"></app-nav-link>
+      </div>
+
+
 
     <div id="hamburguer" class="right-section">
       <i

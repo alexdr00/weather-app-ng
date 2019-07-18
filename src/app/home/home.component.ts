@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {animate, state, style, transition, trigger} from '@angular/animations';
 import {FormControl} from '@angular/forms';
+import {WeatherService} from '../services/weather.service';
 
 @Component({
   selector: 'app-home',
@@ -36,22 +37,20 @@ import {FormControl} from '@angular/forms';
     ])
   ]
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent {
 
-  constructor() { }
+  constructor(private weatherService: WeatherService) { }
 
   private position: 'top' | 'middle' = 'middle';
   private hasBeenSubmitted = false;
   private city = new FormControl('');
+  private weather;
 
   onSubmit() {
     this.position = 'top';
     this.hasBeenSubmitted = true;
 
-    console.log(this.city.value);
+    this.weather = this.weatherService.getWeather(this.city.value);
+    console.log(this.weather);
   }
-
-  ngOnInit() {
-  }
-
 }

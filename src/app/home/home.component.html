@@ -5,5 +5,5 @@
 </div>
 
 <div class="details" [@showDetails]="hasBeenSubmitted ? 'shown' : 'hidden'">
-  <app-weather-details *ngIf="hasBeenSubmitted"></app-weather-details>
+  <app-weather-details *ngIf="hasBeenSubmitted" [weather]="weather"></app-weather-details>
 </div>
